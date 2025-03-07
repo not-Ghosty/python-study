@@ -21,7 +21,12 @@
 input_num = input("Enter any number here:")
 print(type(input_num))
 
-sum = int(input_num) + 2
-print(f" input: {input_num} , sum: {sum}")
+def odd_or_even(input):
+    if input % 2 == 0:
+        print("even")
+    else:
+        print("odd")
 
-    
+
+odd_or_even(int(input_num))
+print("End")
