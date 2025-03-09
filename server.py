@@ -1,16 +1,23 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI
 
-app = Flask(__name__)
+app = FastAPI()
+
+users = []
 
 
-@app.route("/")
+@app.get("/")
 def welcome():
     return "Hello world"
 
 
-if __name__ == "server":
-    print("Server file imported")
+@app.post("/user/{name}", status_code=201)
+def create_user(name: str):
+    if not name:
+        raise Exception()
 
-if __name__ == "__main__":
-    print("Server started")
-    app.run(debug=True)
+    users.append(name)
+    return users
+
+@app.get('/user',status_code=200)
+def get_user():
+    return users
