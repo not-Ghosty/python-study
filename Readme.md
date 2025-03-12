@@ -31,3 +31,28 @@ def odd_or_even(input):
 
 odd_or_even(int(input_num))
 print("End") -->
+
+
+# chain conditional statements
+<!-- age = 22
+if age >= 18 and age < 60:
+    print("eligible")
+
+if 18 <= age < 60:
+    print("eligible@") -->
+
+
+# Loops
+<!-- for number in range(1,10,3):
+    print(f"Attempted {number} ")
+
+
+for number in range(3):
+    print(f"Attempted {number} ")
+    if False:
+        print("yes")
+        break
+else:
+    print("Attempted and failed") -->
+
+    
